@@ -1,0 +1,12 @@
+// style
+h1 {
+  font-size: 50px;
+}
+
+.promo {
+  &__img {
+    width: 130px;
+    height: 91px;
+    background-image: url("../img/sprites.svg#logo");
+  }
+}

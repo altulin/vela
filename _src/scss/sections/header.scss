@@ -1,0 +1,14 @@
+@use "../helpers/mixins" as m;
+
+.header {
+  &__logo {
+    display: block;
+    // width: 200px;
+    // height: 50px;
+    background-color: tomato;
+
+    @include m.hocus {
+      background-color: red;
+    }
+  }
+}

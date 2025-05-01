@@ -1,0 +1,15 @@
+header.header#header
+	.header__inner.container.container--header
+		a.header__logo.logo(href="/index.html")
+			+svg('logo')
+			
+
+		nav
+			ul.header__list 
+				each item in list 
+					li.header__item
+						a.header__link(href=`/${item.link}`)= item.link 
+
+
+		h1 hi
+			
