@@ -1,16 +1,13 @@
 // import * as dotenv from "dotenv";
 
-// dotenv.config({ path: ".env.development" });
+import { toggleCatalog } from "./modules/catalog.js";
+import { createMenu } from "./modules/menu.js";
+import { mobMenu } from "./modules/mobileMenu.js";
 
-// import dotenv from "dotenv";
-// const result = dotenv.config();
-
-// if (result.error) {
-//   throw result.error;
-// }
-
-// console.log(process.env);
-
-const handler = () => {};
+const handler = () => {
+  createMenu();
+  toggleCatalog();
+  mobMenu();
+};
 
 document.addEventListener("DOMContentLoaded", handler);

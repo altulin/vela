@@ -45,3 +45,90 @@ mixin img-retina(name, type, alt, className, width, height, ...args)
 //- +img-svg('', '', '', '', '', '')
 mixin img-svg(name, className, alt, width, height)
   img(class=`${className}` src=`${baseDir}img/svg/${name}.svg` alt=alt width=width height=height loading="lazy")
+
+mixin top_link(label, icon=undefined, modifier, href, parent)
+  a(href=href class=`header-top__link top-link top-link--${modifier}`)(class=parent && `top-link--${modifier}-${parent}`)
+    if icon 
+      +svg(icon)
+    span= label
+
+mixin service_link(parent, icon, modifier, href)
+  a(class=`${parent}__service-link service-link service-link--${modifier} service-link--${icon}` aria-label=`${icon}` href=href)
+    +svg(icon)
+
+mixin soc(parent)
+  div(class=`${parent}__soc soc`)
+    +service_link('soc', 'telegram', 'social', 'https://t.me/agvento-test')
+    +service_link('soc', 'whatsapp', 'social', '"https://wa.me/75555553750')
+
+mixin menu(list, modifier)
+  each item,i in list 
+    li.nav__item(class=`nav__item--${item.icon}` class= modifier &&  `nav__item--${modifier}`)
+      a.nav__link(href=item.submenu ? undefined  :`/${item.icon}` class=`nav__link--${item.icon}` class= modifier &&  `nav__link--${modifier}` class='link-js' data-id=i)
+        +svg(`${item.icon}`)(class=`nav__icon nav__icon--${item.icon}`)
+        span= item.label 
+        if item.submenu && modifier==='catalog'
+          +svg('arr')(class='submenu__arr')
+
+      if item.submenu 
+        ul.nav__submenu.submenu.submenu--main(class=modifier &&  `submenu--${modifier}`)
+          each el,n in item.submenu
+            li.submenu__item.submenu__item--main
+              a.submenu__link.submenu__link--main(href= el.submenu ? undefined  : `/${el.icon}`|'' class=el.icon && `submenu__link--${el.icon}` class='link-js' data-id=`${i}-${n}`)
+                if el.icon 
+                  +svg(el.icon)(class=`submenu__icon submenu__icon--${el.icon}`)
+                span= el.label
+                if el.quantity
+                  i= el.quantity 
+                if el.submenu 
+                  +svg('arr')(class='submenu__arr')
+
+              if el.submenu
+                ul.submenu
+                  each elem,m in el.submenu
+                    li.submenu__item
+                      a.submenu__link.submenu__link(href= elem.submenu ? undefined  : `/${elem.icon}`|'' class='link-js' data-id=`${i}-${n}-${m}`)
+                        span= elem.label
+                        if elem.quantity
+                          i= elem.quantity
+                        if elem.submenu 
+                          +svg('arr')(class='submenu__arr')
+
+                      if elem.submenu
+                        ul.submenu
+                          each point,k in elem.submenu
+                            li.submenu__item
+                              a.submenu__link.submenu__link(href= point.submenu ? undefined  : `/${point.icon}`|'' class='link-js' data-id=`${i}-${n}-${m}-${k}`)
+                                span= point.label
+                                if point.quantity
+                                  i= point.quantity
+                                if point.submenu 
+                                  +svg('arr')(class='submenu__arr')
+
+                              if point.submenu
+                                ul.submenu
+                                  each p,l in elem.submenu
+                                    li.submenu__item
+                                      a.submenu__link.submenu__link(href= p.submenu ? undefined  : `/${p.icon}`|'' class='link-js' data-id=`${i}-${n}-${m}-${k}-${l}`)
+                                        span= p.label
+                                        if p.quantity
+                                          i= p.quantity
+
+mixin lang(modifier)
+  .header-main__lang.lang(class= modifier &&  `lang--${modifier}`)
+    .lang__inner 
+      +svg('earth')
+      .lang__list 
+        button.lang__btn.lang__btn--active(type="button") ru
+        span
+        button.lang__btn(type="button") en
+
+mixin schedule(modifier)
+  p.header-top__link.top-link.top-link--schedule(class=modifier && `top-link--schedule-${modifier}`) 
+    span Ежедневно 
+    span 9:00 — 21:00
+
+                      
+
+
+    

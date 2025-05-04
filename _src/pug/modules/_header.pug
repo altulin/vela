@@ -1,15 +1,76 @@
 header.header#header
-	.header__inner.container.container--header
-		a.header__logo.logo(href="/index.html")
-			+svg('logo')
+	.header__inner
+		.header__top.header-top 
+			.header-top__inner.container.container--header
+				.header-top__left 
+					+lang('top')
+					+top_link('Сайлент-Хилл', 'mark', 'addr', '/#map', 'top')
+					+top_link('+7 555 555-37-50', 'phone', 'phone', 'tel:+75555553750', 'top')
+
+				+schedule('top')
+
+				.header-top__right 
+					+top_link('Доставка', _, 'delivery', '/#delivery')
+					+top_link('Оплата', _, 'pay', '/#pay')
+					+top_link('Контакты', _, 'contacts', '/#contacts')
+
+		.header__main.header-main
+			.header-main__inner.container.container--header
+				.header-main__logo.logo 
+					a.logo__link(href="/" aria-label='logo')
+						+svg('logo')
+				
+				.header-main__burger.burger
+					button.burger__btn#burger(type="button" aria-label="burger")
+						span.burger__line.burger__line--top
+						span.burger__line.burger__line--middle
+						span.burger__line.burger__line--bottom 
+
+				+service_link('header-main', 'hunter', 'service', '/hunter.html')
+				+service_link('header-main', 'wish', 'service', '/wish.html')
+				+service_link('header-main', 'chest', 'service', '/chest.html')
+				
+				.header-main__search.search 
+					form.search__form(role="search")
+						label.search__label(for="search-field") 
+							<input class="search__input" id="search-field" type="search" name="search" placeholder="Поиск     товаров..." required/>
+						button.search__submit(type="submit") Найти
+
+				+soc('header-main') 
+
+				+lang('header')
+							
+
+				.header-main__service.service
+					+service_link('service', 'wish', 'service', '/wish.html')
+					+service_link('service', 'hunter', 'service', '/hunter.html')
+					+service_link('service', 'chest', 'service', '/chest.html')
+				
+				include ../ui/menu.pug
+
+				.header__catalog.header-catalog.catalog 
+					.header-catalog__inner.catalog__inner
+						nav.catalog__nav#catalog.scroll-section
+							include ../ui/catalog.pug
+
+
+
+
 			
 
-		nav
-			ul.header__list 
-				each item in list 
-					li.header__item
-						a.header__link(href=`/${item.link}`)= item.link 
 
 
-		h1 hi
+
+			     
+				 
+			
+
+
+				
+				
+
+			
+
+
+
 			

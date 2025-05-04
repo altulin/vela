@@ -5,8 +5,8 @@ block vars
 		const favFolder = 'favicons';
 		const favDir = `${baseDir}${favFolder}/`
 	-
-		var title = typeof title !== 'undefined' ? title : null
-		var description = typeof description !== 'undefined' ? description : null
+		var title = typeof title !== 'undefined' ? title : 'vela | test'
+		var description = typeof description !== 'undefined' ? description : 'vela test'
 		var image = typeof image !== 'undefined' ? image : `${baseDir}img/`
 	-
 		var html = {
@@ -98,9 +98,9 @@ block vars
 			appleTouchIconPrecomposed167x167: null,
 			appleTouchIconPrecomposed180x180: null,
 			appleTouchIconPrecomposed1024x1024: null,
-			icon: `${favDir}favicon.ico`,
-			icon16x16: `${favDir}favicon-16x16.png`,
-			icon32x32: `${favDir}favicon-32x32.png`,
+			icon: null,
+			icon16x16: null,
+			icon32x32: null,
 			icon96x96: null,
 			icon128x128: null,
 			icon192x192: null,
