@@ -67,8 +67,9 @@ mixin menu(list, modifier)
       a.nav__link(href=item.submenu ? undefined  :`/${item.icon}` class=`nav__link--${item.icon}` class= modifier &&  `nav__link--${modifier}` class='link-js' data-id=i)
         +svg(`${item.icon}`)(class=`nav__icon nav__icon--${item.icon}`)
         span= item.label 
-        if item.submenu && modifier==='catalog'
-          +svg('arr')(class='submenu__arr')
+        //- if item.submenu && modifier==='catalog'
+        if item.submenu
+          +svg('arr')(class='submenu__arr submenu__arr--main')
 
       if item.submenu 
         ul.nav__submenu.submenu.submenu--main(class=modifier &&  `submenu--${modifier}`)
@@ -123,8 +124,10 @@ mixin lang(modifier)
         span
         button.lang__btn(type="button") en
 
-mixin schedule(modifier)
-  p.header-top__link.top-link.top-link--schedule(class=modifier && `top-link--schedule-${modifier}`) 
+mixin schedule(modifier, icon)
+  p.header-top__link.top-link.top-link--schedule(class=modifier && `top-link--schedule-${modifier}`)
+    if icon 
+      +svg(icon) 
     span Ежедневно 
     span 9:00 — 21:00
 

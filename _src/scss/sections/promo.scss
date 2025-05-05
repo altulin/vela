@@ -46,6 +46,8 @@ h1 {
       font-size: 1.5rem;
       width: 100%;
       line-height: 108%;
+      letter-spacing: 0.05rem;
+      margin-bottom: 1rem;
     }
   }
 
@@ -68,6 +70,7 @@ h1 {
       -webkit-line-clamp: 3; /* number of lines to show */
       line-clamp: 3;
       -webkit-box-orient: vertical;
+      margin-bottom: 1.2rem;
     }
   }
 

@@ -1,30 +1,76 @@
-import MmenuLight from "mmenu-light";
-import { width } from "./helpers.js";
+import {
+  body,
+  header,
+  link_js,
+  fake,
+  submenu,
+  width,
+  header_main_nav,
+  fake_link,
+  fake_right,
+  fake_active,
+} from "./helpers.js";
 
-//   burger.addEventListener("click", () => drawer.open());
-//   // close.addEventListener("click", () => drawer.close());
+const backFake = (e) => {
+  const id = e.target.dataset.id;
+
+  const blocks = Array.from(header.querySelectorAll(`.${fake}`));
+  const el = blocks.find((el) => el.dataset.id === id);
+  el.classList.remove(fake_active);
+  el.classList.add(fake_right);
+};
+
+const createFake = async (title, list, id) => {
+  const divEl = document.createElement("div");
+  divEl.classList.add(fake);
+  divEl.classList.add(fake_right);
+  const a = document.createElement("a");
+  a.classList.add(fake_link);
+  a.innerHTML = title;
+  a.dataset.id = id;
+  a.addEventListener("click", backFake);
+  divEl.dataset.id = id;
+  divEl.appendChild(a);
+  divEl.appendChild(list);
+  header.appendChild(divEl);
+};
 
 export const mobMenu = () => {
-  if (width > 768) return;
+  if (width > 769) return;
 
-  const el = document.querySelector(".nav__list");
-  const burger = document.querySelector(".burger__btn");
+  const burger = body.querySelector(".burger__btn");
+  const menu = body.querySelector("#menu");
+  const jsEl = Array.from(header.querySelectorAll(`.${link_js}`));
 
-  if (!el || !burger) return;
-
-  const menu = new MmenuLight(el, "(max-width: 768px)");
-  const navigator = menu.navigation();
-  const drawer = menu.offcanvas({
-    position: "left",
+  const links = jsEl.filter((item) => {
+    if (item.nextElementSibling && item.closest(`.${header_main_nav}`)) {
+      return item.nextElementSibling.classList.contains(submenu);
+    }
   });
 
-  burger.addEventListener("click", function () {
-    if (this.classList.contains("open")) {
-      this.classList.remove("open");
-      drawer.close();
-    } else {
-      this.classList.add("open");
-      drawer.open();
+  links.forEach(async (item) => {
+    const title = item.querySelector("span").innerHTML;
+    const list = item.nextElementSibling;
+    const id = item.dataset.id;
+    await createFake(title, list, id);
+
+    item.addEventListener("click", (e) => {
+      const id = e.target.dataset.id;
+      const blocks = Array.from(header.querySelectorAll(`.${fake}`));
+      const el = blocks.find((el) => el.dataset.id === id);
+      el.classList.remove(fake_right);
+      el.classList.add(fake_active);
+    });
+  });
+
+  burger.addEventListener("click", () => {
+    body.classList.toggle("page-body--overflow");
+    menu.classList.toggle("nav--open");
+
+    if (burger.classList.contains("nav--open")) {
+      const blocks = Array.from(header.querySelectorAll(`.${fake_right}`));
+
+      blocks.forEach((item) => item.classList.remove(fake_right));
     }
   });
 };

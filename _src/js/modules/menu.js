@@ -1,13 +1,11 @@
-import { width } from "./helpers.js";
+import { link_js, link_js_active, submenu, width } from "./helpers.js";
 
 const headerEl = "header";
 const submenu_main = ".submenu--main";
 const submenu_header = "submenu--header";
 const submenu_list = "submenu__list";
-const link_js = "link-js";
-const link_js_active = "link-js-active";
 const nav_link_header = "nav__link--header";
-const submenu = ".submenu";
+
 const catalog_inner = "catalog__inner";
 const submenu_fake = "submenu--fake";
 const catalog_list = "catalog__list";
@@ -45,18 +43,19 @@ const getLenAttr = (dataId) => {
 };
 
 export const createMenu = async () => {
-  if (width < 769) return;
+  if (width < 769) {
+    return;
+  }
 
   // создание сетки
   changeEl();
-
   const header = document.querySelector(headerEl);
   const jsEl = Array.from(header.querySelectorAll(`.${link_js}`));
 
   // все ссылки
   const links = jsEl.filter((el) => {
     return (
-      el.parentNode.querySelector(submenu) !== null &&
+      el.parentNode.querySelector(`.${submenu}`) !== null &&
       !el.classList.contains(nav_link_header)
     );
   });
@@ -145,9 +144,9 @@ export const createMenu = async () => {
 
     //  все чистим
     item.addEventListener("mouseleave", () => {
-      // Array.from(header.querySelectorAll(`.${submenu_fake}`)).forEach((item) =>
-      //   item.remove()
-      // );
+      Array.from(header.querySelectorAll(`.${submenu_fake}`)).forEach((item) =>
+        item.remove()
+      );
     });
   });
 };

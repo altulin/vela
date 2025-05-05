@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://altulin.github.io/...",
+  "homepage": "https://altulin.github.io/vela",
   "scripts": {
     "dev": "gulp development --development",
     "build:test": "gulp production --production --test",
@@ -43,7 +43,7 @@
     "gulp-svgstore": "^9.0.0",
     "gulp-ttf2woff": "^2.0.0",
     "gulp-ttf2woff2": "^5.0.0",
-    "gulp-webp": "^5.0.0",
+    "gulp-webp": "^4.0.1",
     "merge-stream": "^2.0.0",
     "postcss": "^8.5.3",
     "postcss-prettify": "^0.3.4",
@@ -55,7 +55,8 @@
   },
   "dependencies": {
     "connect-history-api-fallback": "^2.0.0",
-    "mmenu-light": "^3.2.2",
+    "gh-pages": "^6.3.0",
+    "node-polyfill-webpack-plugin": "^4.1.0",
     "normalize.css": "^8.0.1"
   }
 }

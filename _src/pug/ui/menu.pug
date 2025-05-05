@@ -1,30 +1,24 @@
  
-nav.header-main__nav.nav#menu
+nav.header-main__nav.nav#menu.scroll-section
   ul.nav__list 
-    +menu(nav, 'header')
-    //- each item in nav 
-      li.nav__item(class=`nav__item--${item.icon}`)
-        a.nav__link(href=item.submenu ? undefined  :`/${item.icon}` class=`nav__link--${item.icon}`)
-          +svg(`${item.icon}`)(class=`nav__icon nav__icon--${item.icon}`)
-          span= item.label 
+    li.nav__item.nav__item--spec.spec
+      .spec__addr 
+        +top_link('Сайлент-Хилл', 'mark', 'addr', '/#map', 'spec')
+        +schedule('spec', 'clock')
+      +soc('spec')
 
-        if item.submenu 
-          ul.nav__submenu.submenu.submenu--main
-            each el in item.submenu
-              li.submenu__item.submenu__item--main
-                a.submenu__link.submenu__link--main(href= el.submenu ? undefined  : `/${el.icon}` class=el.icon && `submenu__link--${el.icon}` class=el.submenu && 'submenu__link-js')
-                  if el.icon 
-                    +svg(el.icon)(class=`submenu__icon submenu__icon--${el.icon}`)
-                  span= el.label
-                  if el.submenu 
-                    +svg('arr')(class='submenu__arr')
 
-                if el.submenu
-                  ul.submenu
-                    each elem in el.submenu
-                      li.submenu__item
-                        a.submenu__link.submenu__link(href="")
-                          span= elem.label 
+    +menu([...catalog_mob, ...nav], 'header')
+
+    li.nav__item.nav__item--bottom
+      +top_link('Доставка', _, 'delivery', '/#delivery')
+    li.nav__item.nav__item--bottom
+      +top_link('Оплата', _, 'pay', '/#pay')
+    li.nav__item.nav__item--bottom
+      +top_link('Контакты', _, 'contacts', '/#contacts')
+
+
+    
 
 
                 

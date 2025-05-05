@@ -30,11 +30,13 @@ import webp from "gulp-webp";
 import svgmin from "gulp-svgmin";
 import replace from "gulp-replace";
 import sprite from "gulp-svg-sprite";
+import webpack from "webpack";
 
 const sass = gulpSass(dartSass);
 const mode = gulpMode(argv.mode);
 
 export {
+  webpack,
   src,
   series,
   parallel,
