@@ -12,6 +12,6 @@
 
    - Pug, SASS, Gulp, Webpack,
 
-3. [Github Pages](https://altulin.github.io/adict)
+3. [Github Pages](https://altulin.github.io/vela/)
 
 Папка готова к развертыванию, но не видны иконки. Браузер блокирует файл спрайта.
