@@ -1,0 +1,4 @@
+@use "./mixins" as m;
+
+@include m.font-load(Maza, Regular, 400, normal);
+@include m.font-load(TenorSans, Regular, 400, normal);

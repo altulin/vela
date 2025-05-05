@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width">
+		<meta name="description" content="vela test">
+		<meta property="og:type" content="website">
+		<meta property="og:locale" content="ru_RU">
+		<meta property="og:title" content="vela | test">
+		<meta property="og:description" content="vela test">
+		<meta property="og:image" content="./img/">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="vela | test">
+		<meta name="twitter:description" content="vela test">
+		<meta name="twitter:image" content="./img/">
+		<title>vela | test</title>
+		<link rel="apple-touch-icon" href="./favicons/apple-touch-icon.png">
+		<link rel="apple-touch-icon" href="./favicons/apple-touch-icon-72x72.png" sizes="72x72">
+		<link rel="stylesheet" href="./css/style.css">
+	</head>
+	<body class="page-body">
+		<header class="header" id="header">
+			<div class="header__inner">
+				<div class="header__top header-top"> 
+					<div class="header-top__inner container container--header">
+						<div class="header-top__left"> 
+							<div class="header-main__lang lang lang--top">
+								<div class="lang__inner"> 
+									<svg>
+										<use xlink:href="./img/sprites.svg#earth"></use>
+									</svg>
+									<div class="lang__list"> 
+										<button class="lang__btn lang__btn--active" type="button">ru</button><span></span>
+										<button class="lang__btn" type="button">en</button>
+									</div>
+								</div>
+							</div><a class="header-top__link top-link top-link--addr top-link--addr-top" href="/#map">
+								<svg>
+									<use xlink:href="./img/sprites.svg#mark"></use>
+								</svg><span>Сайлент-Хилл</span></a><a class="header-top__link top-link top-link--phone top-link--phone-top" href="tel:+75555553750">
+								<svg>
+									<use xlink:href="./img/sprites.svg#phone"></use>
+								</svg><span>+7 555 555-37-50</span></a>
+						</div>
+						<p class="header-top__link top-link top-link--schedule top-link--schedule-top"><span>Ежедневно </span><span>9:00 — 21:00</span>
+						</p>
+						<div class="header-top__right"> <a class="header-top__link top-link top-link--delivery" href="/#delivery"><span>Доставка</span></a><a class="header-top__link top-link top-link--pay" href="/#pay"><span>Оплата</span></a><a class="header-top__link top-link top-link--contacts" href="/#contacts"><span>Контакты</span></a>
+						</div>
+					</div>
+				</div>
+				<div class="header__main header-main">
+					<div class="header-main__inner container container--header">
+						<div class="header-main__logo logo"> <a class="logo__link" href="/" aria-label="logo">
+								<svg>
+									<use xlink:href="./img/sprites.svg#logo"></use>
+								</svg></a></div>
+						<div class="header-main__burger burger">
+							<button class="burger__btn" id="burger" type="button" aria-label="burger"><span class="burger__line burger__line--top"></span><span class="burger__line burger__line--middle"></span><span class="burger__line burger__line--bottom"> </span></button>
+						</div><a class="header-main__service-link service-link service-link--service service-link--hunter" aria-label="hunter" href="/hunter.html">
+							<svg>
+								<use xlink:href="./img/sprites.svg#hunter"></use>
+							</svg></a><a class="header-main__service-link service-link service-link--service service-link--wish" aria-label="wish" href="/wish.html">
+							<svg>
+								<use xlink:href="./img/sprites.svg#wish"></use>
+							</svg></a><a class="header-main__service-link service-link service-link--service service-link--chest" aria-label="chest" href="/chest.html">
+							<svg>
+								<use xlink:href="./img/sprites.svg#chest"></use>
+							</svg></a>
+						<div class="header-main__search search"> 
+							<form class="search__form" role="search">
+								<label class="search__label" for="search-field">
+									 <input class="search__input" id="search-field" type="search" name="search" placeholder="Поиск     товаров..." required/></label>
+								<button class="search__submit" type="submit">Найти</button>
+							</form>
+						</div>
+						<div class="header-main__soc soc"><a class="soc__service-link service-link service-link--social service-link--telegram" aria-label="telegram" href="https://t.me/agvento-test">
+								<svg>
+									<use xlink:href="./img/sprites.svg#telegram"></use>
+								</svg></a><a class="soc__service-link service-link service-link--social service-link--whatsapp" aria-label="whatsapp" href="&quot;https://wa.me/75555553750">
+								<svg>
+									<use xlink:href="./img/sprites.svg#whatsapp"></use>
+								</svg></a>
+						</div>
+						<div class="header-main__lang lang lang--header">
+							<div class="lang__inner"> 
+								<svg>
+									<use xlink:href="./img/sprites.svg#earth"></use>
+								</svg>
+								<div class="lang__list"> 
+									<button class="lang__btn lang__btn--active" type="button">ru</button><span></span>
+									<button class="lang__btn" type="button">en</button>
+								</div>
+							</div>
+						</div>
+						<div class="header-main__service service"><a class="service__service-link service-link service-link--service service-link--wish" aria-label="wish" href="/wish.html">
+								<svg>
+									<use xlink:href="./img/sprites.svg#wish"></use>
+								</svg></a><a class="service__service-link service-link service-link--service service-link--hunter" aria-label="hunter" href="/hunter.html">
+								<svg>
+									<use xlink:href="./img/sprites.svg#hunter"></use>
+								</svg></a><a class="service__service-link service-link service-link--service service-link--chest" aria-label="chest" href="/chest.html">
+								<svg>
+									<use xlink:href="./img/sprites.svg#chest"></use>
+								</svg></a>
+						</div> 
+						<nav class="header-main__nav nav scroll-section" id="menu">
+							<ul class="nav__list"> 
+								<li class="nav__item nav__item--spec spec">
+									<div class="spec__addr"> <a class="header-top__link top-link top-link--addr top-link--addr-spec" href="/#map">
+											<svg>
+												<use xlink:href="./img/sprites.svg#mark"></use>
+											</svg><span>Сайлент-Хилл</span></a>
+										<p class="header-top__link top-link top-link--schedule top-link--schedule-spec">
+											<svg>
+												<use xlink:href="./img/sprites.svg#clock"></use>
+											</svg><span>Ежедневно </span><span>9:00 — 21:00</span>
+										</p>
+									</div>
+									<div class="spec__soc soc"><a class="soc__service-link service-link service-link--social service-link--telegram" aria-label="telegram" href="https://t.me/agvento-test">
+											<svg>
+												<use xlink:href="./img/sprites.svg#telegram"></use>
+											</svg></a><a class="soc__service-link service-link service-link--social service-link--whatsapp" aria-label="whatsapp" href="&quot;https://wa.me/75555553750">
+											<svg>
+												<use xlink:href="./img/sprites.svg#whatsapp"></use>
+											</svg></a>
+									</div>
+								</li>
+								<li class="nav__item nav__item--catalog nav__item--header"><a class="nav__link nav__link--catalog nav__link--header link-js" data-id="0">
+										<svg class="nav__icon nav__icon--catalog">
+											<use xlink:href="./img/sprites.svg#catalog"></use>
+										</svg><span>Каталог</span>
+										<svg class="submenu__arr submenu__arr--main">
+											<use xlink:href="./img/sprites.svg#arr"></use>
+										</svg></a>
+									<ul class="nav__submenu submenu submenu--main submenu--header">
+										<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main submenu__link--gadgets link-js" data-id="0-0">
+												<svg class="submenu__icon submenu__icon--gadgets">
+													<use xlink:href="./img/sprites.svg#gadgets"></use>
+												</svg><span>Смартфоны и гаджеты</span>
+												<svg class="submenu__arr">
+													<use xlink:href="./img/sprites.svg#arr"></use>
+												</svg></a>
+											<ul class="submenu">
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" data-id="0-0-0"><span>Apple iPhone</span><i>100</i>
+														<svg class="submenu__arr">
+															<use xlink:href="./img/sprites.svg#arr"></use>
+														</svg></a>
+													<ul class="submenu">
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-0-0-0"><span>iPhone</span><i>100</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-0-0-1"><span>Складные</span><i>100</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-0-0-2"><span>realme</span><i>5</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-0-0-3"><span>Huawei Mate X6</span><i>100</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-0-0-4"><span>Кнопочные</span><i>100</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-0-0-5"><span>Домашние</span><i>100</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-0-0-6"><span>Samsung </span><i>27</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-0-0-7"><span>Складные</span><i>100</i></a>
+														</li>
+													</ul>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-0-1"><span>iPhone</span><i>100</i></a>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-0-2"><span>Складные</span><i>100</i></a>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-0-3"><span>realme</span><i>5</i></a>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-0-4"><span>Huawei Mate X6</span><i>100</i></a>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-0-5"><span>Кнопочные</span><i>100</i></a>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-0-6"><span>Домашние</span><i>100</i></a>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-0-7"><span>Samsung </span><i>27</i></a>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-0-8"><span>Складные</span><i>100</i></a>
+												</li>
+											</ul>
+										</li>
+										<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main submenu__link--computers link-js" href="0" data-id="0-1">
+												<svg class="submenu__icon submenu__icon--computers">
+													<use xlink:href="./img/sprites.svg#computers"></use>
+												</svg><span>Ноутбуки и компьютеры</span></a>
+										</li>
+										<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main submenu__link--tv link-js" data-id="0-2">
+												<svg class="submenu__icon submenu__icon--tv">
+													<use xlink:href="./img/sprites.svg#tv"></use>
+												</svg><span>Телевизоры и цифровое ТВ</span>
+												<svg class="submenu__arr">
+													<use xlink:href="./img/sprites.svg#arr"></use>
+												</svg></a>
+											<ul class="submenu">
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" data-id="0-2-0"><span>Аудиотехника</span><i>100</i>
+														<svg class="submenu__arr">
+															<use xlink:href="./img/sprites.svg#arr"></use>
+														</svg></a>
+													<ul class="submenu">
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-2-0-0"><span>Складные</span><i>100</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-2-0-1"><span>Складные</span><i>100</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-2-0-2"><span>realme</span><i>5</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-2-0-3"><span>Huawei Mate X6</span><i>100</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-2-0-4"><span>Кнопочные</span><i>100</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-2-0-5"><span>realme</span><i>100</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-2-0-6"><span>realme </span><i>27</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-2-0-7"><span>realme</span><i>100</i></a>
+														</li>
+													</ul>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-2-1"><span>Домашние</span><i>100</i></a>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-2-2"><span>Домашние</span><i>100</i></a>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-2-3"><span>Домашние</span><i>5</i></a>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-2-4"><span>Домашние Mate X6</span><i>100</i></a>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-2-5"><span>Домашние</span><i>100</i></a>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-2-6"><span>Домашние</span><i>100</i></a>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-2-7"><span>Домашние </span><i>27</i></a>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-2-8"><span>Домашние</span><i>100</i></a>
+												</li>
+											</ul>
+										</li>
+										<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main submenu__link--audio link-js" href="0" data-id="0-3">
+												<svg class="submenu__icon submenu__icon--audio">
+													<use xlink:href="./img/sprites.svg#audio"></use>
+												</svg><span>Аудиотехника</span></a>
+										</li>
+										<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main submenu__link--action link-js" href="0" data-id="0-4">
+												<svg class="submenu__icon submenu__icon--action">
+													<use xlink:href="./img/sprites.svg#action"></use>
+												</svg><span>Акции</span></a>
+										</li>
+										<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main submenu__link--new link-js" href="0" data-id="0-5">
+												<svg class="submenu__icon submenu__icon--new">
+													<use xlink:href="./img/sprites.svg#new"></use>
+												</svg><span>Новинки</span></a>
+										</li>
+									</ul>
+								</li>
+								<li class="nav__item nav__item--action nav__item--header"><a class="nav__link nav__link--action nav__link--header link-js" href="/action" data-id="1">
+										<svg class="nav__icon nav__icon--action">
+											<use xlink:href="./img/sprites.svg#action"></use>
+										</svg><span>Акции</span></a>
+								</li>
+								<li class="nav__item nav__item--hot nav__item--header"><a class="nav__link nav__link--hot nav__link--header link-js" data-id="2">
+										<svg class="nav__icon nav__icon--hot">
+											<use xlink:href="./img/sprites.svg#hot"></use>
+										</svg><span>Горячее предложение</span>
+										<svg class="submenu__arr submenu__arr--main">
+											<use xlink:href="./img/sprites.svg#arr"></use>
+										</svg></a>
+									<ul class="nav__submenu submenu submenu--main submenu--header">
+										<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main submenu__link--whom link-js" data-id="2-0">
+												<svg class="submenu__icon submenu__icon--whom">
+													<use xlink:href="./img/sprites.svg#whom"></use>
+												</svg><span>Кому</span>
+												<svg class="submenu__arr">
+													<use xlink:href="./img/sprites.svg#arr"></use>
+												</svg></a>
+											<ul class="submenu">
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" data-id="2-0-0"><span>Для мужчин</span><i>123</i>
+														<svg class="submenu__arr">
+															<use xlink:href="./img/sprites.svg#arr"></use>
+														</svg></a>
+													<ul class="submenu">
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" data-id="2-0-0-0"><span>Плойка</span><i>63</i>
+																<svg class="submenu__arr">
+																	<use xlink:href="./img/sprites.svg#arr"></use>
+																</svg></a>
+															<ul class="submenu">
+																<li class="submenu__item"><a class="submenu__link submenu__link link-js" data-id="2-0-0-0-0"><span>Плойка</span><i>63</i></a></li>
+																<li class="submenu__item"><a class="submenu__link submenu__link link-js" data-id="2-0-0-0-1"><span>Фен</span><i>6</i></a></li>
+																<li class="submenu__item"><a class="submenu__link submenu__link link-js" data-id="2-0-0-0-2"><span>Массажер</span><i>3</i></a></li>
+															</ul>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" data-id="2-0-0-1"><span>Фен</span><i>6</i>
+																<svg class="submenu__arr">
+																	<use xlink:href="./img/sprites.svg#arr"></use>
+																</svg></a>
+															<ul class="submenu">
+																<li class="submenu__item"><a class="submenu__link submenu__link link-js" data-id="2-0-0-1-0"><span>Плойка</span><i>63</i></a></li>
+																<li class="submenu__item"><a class="submenu__link submenu__link link-js" data-id="2-0-0-1-1"><span>Фен</span><i>6</i></a></li>
+																<li class="submenu__item"><a class="submenu__link submenu__link link-js" data-id="2-0-0-1-2"><span>Массажер</span><i>3</i></a></li>
+															</ul>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" data-id="2-0-0-2"><span>Массажер</span><i>3</i>
+																<svg class="submenu__arr">
+																	<use xlink:href="./img/sprites.svg#arr"></use>
+																</svg></a>
+															<ul class="submenu">
+																<li class="submenu__item"><a class="submenu__link submenu__link link-js" data-id="2-0-0-2-0"><span>Плойка</span><i>63</i></a></li>
+																<li class="submenu__item"><a class="submenu__link submenu__link link-js" data-id="2-0-0-2-1"><span>Фен</span><i>6</i></a></li>
+																<li class="submenu__item"><a class="submenu__link submenu__link link-js" data-id="2-0-0-2-2"><span>Массажер</span><i>3</i></a></li>
+															</ul>
+														</li>
+													</ul>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" data-id="2-0-1"><span>Для женщин</span><i>63</i>
+														<svg class="submenu__arr">
+															<use xlink:href="./img/sprites.svg#arr"></use>
+														</svg></a>
+													<ul class="submenu">
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="2-0-1-0"><span>Миксер</span><i>63</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="2-0-1-1"><span>Дрель</span><i>6</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="2-0-1-2"><span>Массажер</span><i>3</i></a>
+														</li>
+													</ul>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="2-0-2"><span>Папе</span><i>120</i></a>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="2-0-3"><span>Сотрудникам</span><i>30</i></a>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="2-0-4"><span>Мужу</span><i>120</i></a>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="2-0-5"><span>Корпоративный</span><i>100</i></a>
+												</li>
+											</ul>
+										</li>
+										<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main submenu__link--occasion link-js" data-id="2-1">
+												<svg class="submenu__icon submenu__icon--occasion">
+													<use xlink:href="./img/sprites.svg#occasion"></use>
+												</svg><span>Повод</span>
+												<svg class="submenu__arr">
+													<use xlink:href="./img/sprites.svg#arr"></use>
+												</svg></a>
+											<ul class="submenu">
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="2-1-0"><span>Новый год</span><i>123</i></a>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="2-1-1"><span>День влюбленных</span><i>63</i></a>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="2-1-2"><span>23 февраля</span><i>120</i></a>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="2-1-3"><span>8 марта</span><i>30</i></a>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="2-1-4"><span>1 мая</span><i>120</i></a>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="2-1-5"><span>День независимости</span><i>100</i></a>
+												</li>
+											</ul>
+										</li>
+										<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main submenu__link--filling link-js" data-id="2-2">
+												<svg class="submenu__icon submenu__icon--filling">
+													<use xlink:href="./img/sprites.svg#filling"></use>
+												</svg><span>Наполнение</span>
+												<svg class="submenu__arr">
+													<use xlink:href="./img/sprites.svg#arr"></use>
+												</svg></a>
+											<ul class="submenu">
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="2-2-0"><span>Для мужчин</span><i>123</i></a>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="2-2-1"><span>Для женщин</span><i>63</i></a>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="2-2-2"><span>Папе</span><i>120</i></a>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="2-2-3"><span>Сотрудникам</span><i>30</i></a>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="2-2-4"><span>Мужу</span><i>120</i></a>
+												</li>
+												<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="2-2-5"><span>Корпоративный</span><i>100</i></a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class="nav__item nav__item--gift nav__item--header"><a class="nav__link nav__link--gift nav__link--header link-js" href="/gift" data-id="3">
+										<svg class="nav__icon nav__icon--gift">
+											<use xlink:href="./img/sprites.svg#gift"></use>
+										</svg><span>Подарочные наборы</span></a>
+								</li>
+								<li class="nav__item nav__item--events nav__item--header"><a class="nav__link nav__link--events nav__link--header link-js" data-id="4">
+										<svg class="nav__icon nav__icon--events">
+											<use xlink:href="./img/sprites.svg#events"></use>
+										</svg><span>События</span>
+										<svg class="submenu__arr submenu__arr--main">
+											<use xlink:href="./img/sprites.svg#arr"></use>
+										</svg></a>
+									<ul class="nav__submenu submenu submenu--main submenu--header">
+										<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main link-js" href="0" data-id="4-0"><span>ИгроМИР</span></a>
+										</li>
+										<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main link-js" href="0" data-id="4-1"><span>Мероприятия</span></a>
+										</li>
+										<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main link-js" href="0" data-id="4-2"><span>Мастер-классы</span></a>
+										</li>
+									</ul>
+								</li>
+								<li class="nav__item nav__item--brends nav__item--header"><a class="nav__link nav__link--brends nav__link--header link-js" href="/brends" data-id="5">
+										<svg class="nav__icon nav__icon--brends">
+											<use xlink:href="./img/sprites.svg#brends"></use>
+										</svg><span>Наши бренды</span></a>
+								</li>
+								<li class="nav__item nav__item--computer nav__item--header"><a class="nav__link nav__link--computer nav__link--header link-js" href="/computer" data-id="6">
+										<svg class="nav__icon nav__icon--computer">
+											<use xlink:href="./img/sprites.svg#computer"></use>
+										</svg><span>Собрать компьютер</span></a>
+								</li>
+								<li class="nav__item nav__item--bottom"><a class="header-top__link top-link top-link--delivery" href="/#delivery"><span>Доставка</span></a>
+								</li>
+								<li class="nav__item nav__item--bottom"><a class="header-top__link top-link top-link--pay" href="/#pay"><span>Оплата</span></a>
+								</li>
+								<li class="nav__item nav__item--bottom"><a class="header-top__link top-link top-link--contacts" href="/#contacts"><span>Контакты</span></a>
+								</li>
+							</ul>
+						</nav>
+						<div class="header__catalog header-catalog catalog"> 
+							<div class="header-catalog__inner catalog__inner">
+								<nav class="catalog__nav scroll-section" id="catalog">
+									<ul class="nav__list catalog__list nav__list nav__list--catalog"> 
+										<li class="nav__item nav__item--gadgets nav__item--catalog"><a class="nav__link nav__link--gadgets nav__link--catalog link-js" data-id="0">
+												<svg class="nav__icon nav__icon--gadgets">
+													<use xlink:href="./img/sprites.svg#gadgets"></use>
+												</svg><span>Смартфоны и гаджеты</span>
+												<svg class="submenu__arr submenu__arr--main">
+													<use xlink:href="./img/sprites.svg#arr"></use>
+												</svg></a>
+											<ul class="nav__submenu submenu submenu--main submenu--catalog">
+												<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main link-js" data-id="0-0"><span>Apple iPhone</span><i>100</i>
+														<svg class="submenu__arr">
+															<use xlink:href="./img/sprites.svg#arr"></use>
+														</svg></a>
+													<ul class="submenu">
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-0-0"><span>iPhone</span><i>100</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-0-1"><span>Складные</span><i>100</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-0-2"><span>realme</span><i>5</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-0-3"><span>Huawei Mate X6</span><i>100</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-0-4"><span>Кнопочные</span><i>100</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-0-5"><span>Домашние</span><i>100</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-0-6"><span>Samsung </span><i>27</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="0-0-7"><span>Складные</span><i>100</i></a>
+														</li>
+													</ul>
+												</li>
+												<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main link-js" href="0" data-id="0-1"><span>iPhone</span><i>100</i></a>
+												</li>
+												<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main link-js" href="0" data-id="0-2"><span>Складные</span><i>100</i></a>
+												</li>
+												<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main link-js" href="0" data-id="0-3"><span>realme</span><i>5</i></a>
+												</li>
+												<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main link-js" href="0" data-id="0-4"><span>Huawei Mate X6</span><i>100</i></a>
+												</li>
+												<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main link-js" href="0" data-id="0-5"><span>Кнопочные</span><i>100</i></a>
+												</li>
+												<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main link-js" href="0" data-id="0-6"><span>Домашние</span><i>100</i></a>
+												</li>
+												<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main link-js" href="0" data-id="0-7"><span>Samsung </span><i>27</i></a>
+												</li>
+												<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main link-js" href="0" data-id="0-8"><span>Складные</span><i>100</i></a>
+												</li>
+											</ul>
+										</li>
+										<li class="nav__item nav__item--computers nav__item--catalog"><a class="nav__link nav__link--computers nav__link--catalog link-js" href="/computers" data-id="1">
+												<svg class="nav__icon nav__icon--computers">
+													<use xlink:href="./img/sprites.svg#computers"></use>
+												</svg><span>Ноутбуки и компьютеры</span></a>
+										</li>
+										<li class="nav__item nav__item--tv nav__item--catalog"><a class="nav__link nav__link--tv nav__link--catalog link-js" data-id="2">
+												<svg class="nav__icon nav__icon--tv">
+													<use xlink:href="./img/sprites.svg#tv"></use>
+												</svg><span>Телевизоры и цифровое ТВ</span>
+												<svg class="submenu__arr submenu__arr--main">
+													<use xlink:href="./img/sprites.svg#arr"></use>
+												</svg></a>
+											<ul class="nav__submenu submenu submenu--main submenu--catalog">
+												<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main link-js" data-id="2-0"><span>Аудиотехника</span><i>100</i>
+														<svg class="submenu__arr">
+															<use xlink:href="./img/sprites.svg#arr"></use>
+														</svg></a>
+													<ul class="submenu">
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="2-0-0"><span>Складные</span><i>100</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="2-0-1"><span>Складные</span><i>100</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="2-0-2"><span>realme</span><i>5</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="2-0-3"><span>Huawei Mate X6</span><i>100</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="2-0-4"><span>Кнопочные</span><i>100</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="2-0-5"><span>realme</span><i>100</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="2-0-6"><span>realme </span><i>27</i></a>
+														</li>
+														<li class="submenu__item"><a class="submenu__link submenu__link link-js" href="0" data-id="2-0-7"><span>realme</span><i>100</i></a>
+														</li>
+													</ul>
+												</li>
+												<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main link-js" href="0" data-id="2-1"><span>Домашние</span><i>100</i></a>
+												</li>
+												<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main link-js" href="0" data-id="2-2"><span>Домашние</span><i>100</i></a>
+												</li>
+												<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main link-js" href="0" data-id="2-3"><span>Домашние</span><i>5</i></a>
+												</li>
+												<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main link-js" href="0" data-id="2-4"><span>Домашние Mate X6</span><i>100</i></a>
+												</li>
+												<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main link-js" href="0" data-id="2-5"><span>Домашние</span><i>100</i></a>
+												</li>
+												<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main link-js" href="0" data-id="2-6"><span>Домашние</span><i>100</i></a>
+												</li>
+												<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main link-js" href="0" data-id="2-7"><span>Домашние </span><i>27</i></a>
+												</li>
+												<li class="submenu__item submenu__item--main"><a class="submenu__link submenu__link--main link-js" href="0" data-id="2-8"><span>Домашние</span><i>100</i></a>
+												</li>
+											</ul>
+										</li>
+										<li class="nav__item nav__item--audio nav__item--catalog"><a class="nav__link nav__link--audio nav__link--catalog link-js" href="/audio" data-id="3">
+												<svg class="nav__icon nav__icon--audio">
+													<use xlink:href="./img/sprites.svg#audio"></use>
+												</svg><span>Аудиотехника</span></a>
+										</li>
+										<li class="nav__item nav__item--action nav__item--catalog"><a class="nav__link nav__link--action nav__link--catalog link-js" href="/action" data-id="4">
+												<svg class="nav__icon nav__icon--action">
+													<use xlink:href="./img/sprites.svg#action"></use>
+												</svg><span>Акции</span></a>
+										</li>
+										<li class="nav__item nav__item--new nav__item--catalog"><a class="nav__link nav__link--new nav__link--catalog link-js" href="/new" data-id="5">
+												<svg class="nav__icon nav__icon--new">
+													<use xlink:href="./img/sprites.svg#new"></use>
+												</svg><span>Новинки</span></a>
+										</li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page-main">
+			<section class="promo"> 
+				<picture>
+					<source media="(max-width: 768px)" type="image/webp" srcset="./img/bg-768.webp 1x, ./img/bg-768@2x.webp 2x"/>
+					<source media="(max-width: 768px)" type="image/jpeg" srcset="./img/bg-768.jpg 1x, ./img/bg-768@2x.jpg 2x"/>
+					<source type="image/webp" srcset="./img/bg.webp 1x, ./img/bg@2x.webp 2x"/><img class="promo__image" src="./img/bg.jpg" srcset="./img/bg.jpg 1x, ./img/bg@2x.jpg 2x" alt="img" width="1440" height="439"/>
+				</picture>
+				<div class="promo__inner container"> 
+					<div class="promo__content"> 
+						<h1 class="promo__title">Отправляйся в приключения с нашими эпическими лут-корзинами и наборами!</h1>
+						<p class="promo__text">Развивай свои навыки, следуя мудрым стратегиям мастеров, и поднимайся на новый уровень мастерства! С нашей поддержкой каждое твое действие станет частью великого искусства, а победы — результатом точного плана и безупречной подготовки!</p><a class="promo__link" href="/catalog" target="_blank">в каталог </a>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="main-footer">
+			<div class="main-footer__inner container">
+				<div class="main-footer__top"></div>
+				<div class="main-footer__bottom"></div>
+			</div>
+		</footer>
+		<script src="./js/script.js"></script>
+	</body>
+</html>
