@@ -1223,6 +1223,7 @@ div.submenu .submenu--fake .submenu__link,
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
+  padding-bottom: 1.875rem;
 }
 
 .fake__link {
@@ -1416,6 +1417,7 @@ h1 {
     width: 100%;
     padding: 0.75rem 0.5rem;
     height: 2.5rem;
+    border-radius: 0.31rem;
   }
   .logo__link {
     width: 3.5rem;
