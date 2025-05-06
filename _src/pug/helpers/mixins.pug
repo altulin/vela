@@ -46,20 +46,21 @@ mixin img-retina(name, type, alt, className, width, height, ...args)
 mixin img-svg(name, className, alt, width, height)
   img(class=`${className}` src=`${baseDir}img/svg/${name}.svg` alt=alt width=width height=height loading="lazy")
 
-mixin top_link(label, icon=undefined, modifier, href, parent)
-  a(href=href class=`header-top__link top-link top-link--${modifier}`)(class=parent && `top-link--${modifier}-${parent}`)
+mixin top_link(label, icon=undefined, modifier, link, parent)
+  a(href=link class=`header-top__link top-link top-link--${modifier}`)
     if icon 
       +svg(icon)
     span= label
 
-mixin service_link(parent, icon, modifier, href)
-  a(class=`${parent}__service-link service-link service-link--${modifier} service-link--${icon}` aria-label=`${icon}` href=href)
+mixin service_link(parent, icon, modifier, link)
+  a(class=`${parent}__service-link service-link service-link--${modifier} service-link--${icon}` aria-label=`${icon}` href=link)
     +svg(icon)
 
 mixin soc(parent)
   div(class=`${parent}__soc soc`)
     +service_link('soc', 'telegram', 'social', 'https://t.me/agvento-test')
-    +service_link('soc', 'whatsapp', 'social', '"https://wa.me/75555553750')
+    +service_link('soc', 'whatsapp', 'social', 'https://wa.me/75555553750')
+
 
 mixin menu(list, modifier)
   each item,i in list 
